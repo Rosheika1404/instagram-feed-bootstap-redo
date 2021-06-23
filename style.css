@@ -1,0 +1,50 @@
+#grid{
+    margin:0;
+    padding:0;
+    
+}
+ #toggle .nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+    color: #fff;
+    background-color: #6c757d;
+    
+}
+#toggle .nav-link:focus, #toggle .nav-link:hover {
+    color: #363738;
+}
+#toggle .toggle{
+    color:#6c757d;
+}
+.icon{
+    padding:6px;
+}
+.like{
+    margin-top: 5px;
+    padding:2px;
+}
+.icon .like{
+    font-size: 12px;
+}
+
+/*---Media Queries --*/
+@media only screen and (max-width: 992px) {
+    .modal-dialog { 
+        max-width: 800px;
+    }
+ }
+ @media only screen and (max-width: 768px) {
+    #header{
+        margin:auto;
+    } 
+    .modal-dialog {
+        width: 600px;
+    }
+ }
+ @media only screen and (max-width: 576px) {
+   #header{
+       margin:auto;
+   } 
+   .modal-dialog {
+    width: 400px;
+}   
+ }
+ 

@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!--   -->
+    <link rel="stylesheet" href="/style.css" />
+
+    <!-- Bootstrap -->
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x"
+      crossorigin="anonymous"
+    />
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+      crossorigin="anonymous"
+    />
+
+    <title>The Instagram Photo Feed (with Bootstrap)</title>
+  </head>
+
+  <body>
+    <!-- header -->
+    <div class="container-fluid">
+      <nav
+        class="
+          navbar navbar-expand-md navbar-light
+          bg-light
+          m-auto
+          d-flex
+          justify-content-around
+        "
+        id="header"
+      >
+        <div class="logo">
+          <a class="navbar-brand" href="#"
+            ><i class="fab fa-instagram"></i> Instagram</a
+          >
+        </div>
+        <div class="d-inline-flex">
+          <!-- Button trigger modal -->
+
+          <!--Create new button-->
+          <button
+            type="button"
+            class="btn btn-success m-1"
+            data-toggle="modal"
+            data-target="#exampleModal"
+          >
+            Create a new post
+          </button>
+
+          <!--  Create New Post Modal -->
+          <div
+            class="modal fade"
+            id="exampleModal"
+            tabindex="-1"
+            role="dialog"
+            aria-labelledby="exampleModalLabel"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-body">
+                  <div class="row">
+                    <div class="input-group">
+                      <textarea
+                        class="form-control"
+                        aria-label="With textarea"
+                      ></textarea>
+                    </div>
+                    <div class="mt-2">
+                      <!--camera button-->
+                      <button type="button" class="btn btn-outline-secondary">
+                        <i class="fas fa-camera"></i>
+                      </button>
+                      <!--Map location button-->
+                      <button type="button" class="btn btn-outline-secondary">
+                        <i class="fas fa-map-marker"></i>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <div class="modal-footer">
+                  <!--cancel Button-->
+                  <button
+                    type="button"
+                    class="btn btn-secondary"
+                    data-dismiss="modal"
+                  >
+                    Cancel
+                  </button>
+                  <!--Publish Button-->
+                  <button type="button" class="btn btn-success">Publish</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!--Gear Dropdown-->
+          <div class="dropdown">
+            <!--Gear button-->
+            <button
+              class="btn btn-light dropdown-toggle m-1"
+              type="button"
+              id="dropdownMenuButton"
+              data-toggle="dropdown"
+            >
+              <i class="fas fa-cog"></i>
+            </button>
+
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="#">Action</a>
+              <a class="dropdown-item" href="#">Another action</a>
+              <a class="dropdown-item" href="#">Something else here</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">Logout</a>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+      <section id="toggle">
+        <ul
+          class="nav nav-pills m-3 justify-content-center toggle-pills"
+          id="pills-tab"
+          role="tablist"
+        >
+          <li class="nav-item">
+            <!--Multiview tab-->
+            <a
+              class="nav-link active toggle"
+              id="pills-multiview-tab"
+              data-toggle="pill"
+              href="#pills-multiview"
+              type="button"
+              role="tab"
+              aria-controls="pills-multiview"
+              aria-selected="true"
+              ><i class="fas fa-th"></i
+            ></a>
+          </li>
+          <li class="nav-item">
+            <!--single view tab-->
+            <a
+              class="nav-link toggle"
+              id="pills-singleview-tab"
+              data-toggle="pill"
+              href="#pills-singleview"
+              role="tab"
+              aria-controls="pills-singleview"
+              aria-selected="false"
+              ><i class="fas fa-square"></i
+            ></a>
+          </li>
+        </ul>
+
+        <div class="tab-content" id="pills-tabContent">
+          <!--Multiview -->
+          <div
+            class="tab-pane fade show active"
+            id="pills-multiview"
+            role="tabpanel"
+            aria-labelledby="pills-multiview-tab"
+          >
+            <div class="container-fluid bg-light pt-1" id="grid">
+              <!--Row 1-->
+              <div class="card-group">
+                <div class="card">
+                  <img
+                    class="card-img"
+                    src="https://images.freeimages.com/images/large-previews/e5f/pink-lotus-1396744.jpg"
+                    alt="Card image cap"
+                  />
+                </div>
+                <div class="card">
+                  <img
+                    class="card-img"
+                    src="https://images.freeimages.com/images/large-previews/035/young-golden-retriever-1404848.jpg"
+                    alt="Card image cap"
+                  />
+                </div>
+                <div class="card">
+                  <img
+                    class="card-img"
+                    src="https://images.freeimages.com/images/large-previews/fe4/white-tiger-1360369.jpg"
+                    alt="Card image cap"
+                  />
+                </div>
+              </div>
+
+              <!--Row 2-->
+              <div class="card-group">
+                <div class="card">
+                  <img
+                    class="card-img"
+                    src="https://images.freeimages.com/images/large-previews/7ed/pizza-1327877.jpg"
+                    alt="Card image cap"
+                    width="626"
+                    height="420"
+                  />
+                </div>
+                <div class="card">
+                  <iframe
+                    src="https://giphy.com/embed/Yg5ABuNt4BgO9GcN4v"
+                    width="626"
+                    height="420"
+                    frameborder="0"
+                    class="giphy-embed m-auto"
+                    allowfullscreen
+                  ></iframe>
+                </div>
+                <div class="card">
+                  <img
+                    class="card-img"
+                    src="https://images.pexels.com/photos/459225/pexels-photo-459225.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+                    alt="Card image cap"
+                    width="626"
+                    height="418"
+                  />
+                </div>
+              </div>
+              <!--Row 3-->
+              <div class="card-group">
+                <div class="card">
+                  <img
+                    class="card-img"
+                    src="https://images.pexels.com/photos/235615/pexels-photo-235615.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+                    alt="Card image cap"
+                  />
+                </div>
+                <div class="card">
+                  <img
+                    class="card-img"
+                    src="https://images.pexels.com/photos/3662803/pexels-photo-3662803.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+                    alt="Card image cap"
+                    width="626"
+                    height="420"
+                  />
+                </div>
+                <div class="card">
+                  <img
+                    class="card-img"
+                    src="https://images.pexels.com/photos/2097090/pexels-photo-2097090.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+                    alt="Card image cap"
+                    width="626"
+                    height="420"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!--Single View -->
+          <div
+            class="tab-pane fade"
+            id="pills-singleview"
+            role="tabpanel"
+            aria-labelledby="pills-singleview-tab"
+          >
+            <div class="container-fluid bg-light p-5">
+              <!--Post 1-->
+              <div class="container card w-50 m-auto p-3">
+                <div class="d-flex justify-content-between p-3">
+                  <h3>My First Post</h3>
+                  <span>12/14</span>
+                </div>
+                <img
+                  class="card-img-top img-fluid"
+                  src="https://images.freeimages.com/images/large-previews/e5f/pink-lotus-1396744.jpg"
+                  alt="Card image cap"
+                />
+                <div class class="card-body">
+                  <div class="icons-left d-flex justify-content-between p-2">
+                    <div class="icons d-flex">
+                      <div class="icon">
+                        <i class="far fa-heart"></i>
+                      </div>
+                      <div class="icon">
+                        <i class="far fa-comment"></i>
+                      </div>
+                      <div class="icon">
+                        <i class="far fa-paper-plane"></i>
+                      </div>
+                      <span class="like">23 Likes</span>
+                    </div>
+                    <div class="icon" id="bookmark">
+                      <i class="far fa-bookmark"></i>
+                    </div>
+                  </div>
+                  <p class="card-text">
+                    This is my first photo of the feed. This is a multiline
+                    comment for testing purpose. I am learning to code with
+                    <strong>#BreathCode</strong>
+                  </p>
+                  <span><i class="far fa-heart"></i></span>
+                  <span>Comment ...</span>
+                </div>
+              </div>
+              <!--Post 2-->
+              <div class="container card w-50 m-auto mt-4 p-3">
+                <div class="d-flex justify-content-between p-3">
+                  <h3>My Post</h3>
+                  <span>12/14</span>
+                </div>
+                <img
+                  class="card-img-top img-fluid"
+                  src="https://images.freeimages.com/images/large-previews/035/young-golden-retriever-1404848.jpg"
+                  alt="Card image cap"
+                />
+                <div class class="card-body">
+                  <div class="icons-left d-flex justify-content-between p-2">
+                    <div class="icons d-flex">
+                      <div class="icon">
+                        <i class="far fa-heart"></i>
+                      </div>
+                      <div class="icon">
+                        <i class="far fa-comment"></i>
+                      </div>
+                      <div class="icon">
+                        <i class="far fa-paper-plane"></i>
+                      </div>
+                      <span class="like">23 Likes</span>
+                    </div>
+                    <div class="icon" id="bookmark">
+                      <i class="far fa-bookmark"></i>
+                    </div>
+                  </div>
+                  <p class="card-text">
+                    This is my first photo of the feed. This is a multiline
+                    comment for testing purpose. I am learning to code with
+                    <strong>#BreathCode</strong>
+                  </p>
+                  <span><i class="far fa-heart"></i></span>
+                  <span>Comment ...</span>
+                </div>
+              </div>
+              <!--Post 3-->
+              <div class="container card w-50 m-auto mt-4 p-3">
+                <div class="d-flex justify-content-between p-3">
+                  <h3>My Post</h3>
+                  <span>12/14</span>
+                </div>
+                <img
+                  class="card-img-top img-fluid"
+                  src="https://images.freeimages.com/images/large-previews/fe4/white-tiger-1360369.jpg"
+                  alt="Card image cap"
+                />
+                <div class class="card-body">
+                  <div class="icons-left d-flex justify-content-between p-2">
+                    <div class="icons d-flex">
+                      <div class="icon">
+                        <i class="far fa-heart"></i>
+                      </div>
+                      <div class="icon">
+                        <i class="far fa-comment"></i>
+                      </div>
+                      <div class="icon">
+                        <i class="far fa-paper-plane"></i>
+                      </div>
+                      <span class="like">23 Likes</span>
+                    </div>
+                    <div class="icon" id="bookmark">
+                      <i class="far fa-bookmark"></i>
+                    </div>
+                  </div>
+                  <p class="card-text">
+                    This is my first photo of the feed. This is a multiline
+                    comment for testing purpose. I am learning to code with
+                    <strong>#BreathCode</strong>
+                  </p>
+                  <span><i class="far fa-heart"></i></span>
+                  <span>Comment ...</span>
+                </div>
+              </div>
+              <!--Post 4-->
+              <div class="container card w-50 m-auto mt-4 p-3">
+                <div class="d-flex justify-content-between p-3">
+                  <h3>My Post</h3>
+                  <span>12/14</span>
+                </div>
+                <img
+                  class="card-img-top img-fluid"
+                  src="https://images.freeimages.com/images/large-previews/7ed/pizza-1327877.jpg"
+                  alt="Card image cap"
+                />
+                <div class class="card-body">
+                  <div class="icons-left d-flex justify-content-between p-2">
+                    <div class="icons d-flex">
+                      <div class="icon">
+                        <i class="far fa-heart"></i>
+                      </div>
+                      <div class="icon">
+                        <i class="far fa-comment"></i>
+                      </div>
+                      <div class="icon">
+                        <i class="far fa-paper-plane"></i>
+                      </div>
+                      <span class="like">23 Likes</span>
+                    </div>
+                    <div class="icon" id="bookmark">
+                      <i class="far fa-bookmark"></i>
+                    </div>
+                  </div>
+                  <p class="card-text">
+                    This is my first photo of the feed. This is a multiline
+                    comment for testing purpose. I am learning to code with
+                    <strong>#BreathCode</strong>
+                  </p>
+                  <span><i class="far fa-heart"></i></span>
+                  <span>Comment ...</span>
+                </div>
+              </div>
+              <!--Post 5-->
+              <div class="container card w-50 m-auto mt-4 p-3">
+                <div class="d-flex justify-content-between p-3">
+                  <h3>My Gify</h3>
+                  <span>12/14</span>
+                </div>
+                <iframe
+                  src="https://giphy.com/embed/Yg5ABuNt4BgO9GcN4v"
+                  width="626"
+                  height="420"
+                  frameborder="0"
+                  class="giphy-embed m-auto"
+                  allowfullscreen
+                ></iframe>
+                <div class class="card-body">
+                  <div class="icons-left d-flex justify-content-between p-2">
+                    <div class="icons d-flex">
+                      <div class="icon">
+                        <i class="far fa-heart"></i>
+                      </div>
+                      <div class="icon">
+                        <i class="far fa-comment"></i>
+                      </div>
+                      <div class="icon">
+                        <i class="far fa-paper-plane"></i>
+                      </div>
+                      <span class="like">23 Likes</span>
+                    </div>
+                    <div class="icon" id="bookmark">
+                      <i class="far fa-bookmark"></i>
+                    </div>
+                  </div>
+                  <p class="card-text">
+                    This is my first photo of the feed. This is a multiline
+                    comment for testing purpose. I am learning to code with
+                    <strong>#BreathCode</strong>
+                  </p>
+                  <span><i class="far fa-heart"></i></span>
+                  <span>Comment ...</span>
+                </div>
+              </div>
+              <!--Post 6-->
+              <div class="container card w-50 m-auto mt-4 p-3">
+                <div class="d-flex justify-content-between p-3">
+                  <h3>My First Post</h3>
+                  <span>12/14</span>
+                </div>
+                <img
+                  class="card-img-top img-fluid"
+                  src="https://images.pexels.com/photos/459225/pexels-photo-459225.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+                  alt="Card image cap"
+                />
+                <div class class="card-body">
+                  <div class="icons-left d-flex justify-content-between p-2">
+                    <div class="icons d-flex">
+                      <div class="icon">
+                        <i class="far fa-heart"></i>
+                      </div>
+                      <div class="icon">
+                        <i class="far fa-comment"></i>
+                      </div>
+                      <div class="icon">
+                        <i class="far fa-paper-plane"></i>
+                      </div>
+                      <span class="like">23 Likes</span>
+                    </div>
+                    <div class="icon" id="bookmark">
+                      <i class="far fa-bookmark"></i>
+                    </div>
+                  </div>
+                  <p class="card-text">
+                    This is my first photo of the feed. This is a multiline
+                    comment for testing purpose. I am learning to code with
+                    <strong>#BreathCode</strong>
+                  </p>
+                  <span><i class="far fa-heart"></i></span>
+                  <span>Comment ...</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- Bootstap js -->
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
